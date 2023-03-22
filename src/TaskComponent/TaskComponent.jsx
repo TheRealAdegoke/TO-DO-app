@@ -1,4 +1,3 @@
-import { set } from 'mongoose'
 import React, { useEffect, useState } from 'react'
 import {BiTrash} from "react-icons/bi"
 import {BiEditAlt} from "react-icons/bi"
@@ -37,7 +36,8 @@ const TaskComponent = () => {
                 ...todos,
                 {
                     id: todos.length + 1,
-                    text: todo.trim()
+                    text: todo.trim(),
+                    date: new Date().toLocaleString()
                 }
             ])
         }
@@ -123,6 +123,7 @@ const TaskComponent = () => {
             {todos.map((todo, index) => {
                 return <li key={todo.id} className="listItems">
                     <input type="checkbox" name="checkbox" id="check" className='check' checked={todo.completed} onChange={() => handleCheckbox(index)} />
+                    <span className='date'>{todo.date}</span>
                     <span style={{textDecoration: todo.completed ? "line-through" : "none"}}>{todo.text}</span>  
                             <span className='parentSpan'>
                                 <span className='reactIcon' onClick={() => {
