@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkcyan;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.taskForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 200px auto 0;
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.taskForm > h4 {
+    font-size: 25px;
+    font-weight: 300;
+    padding: 30px 0 20px;
+}
+
+.taskForm > input {
+    background-color: white;
+    width: 80%;
+    height: 35px;
+    border-top-color: rgb(242, 244, 248);
+    border-left-color: rgb(242, 244, 248);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    padding-left: 10px;
+    margin: 0 0 20px;
+    outline-color: rgb(100, 92, 255)
+}
+
+.taskForm > input::placeholder {
+    font-size: 18px;
+}
+
+.taskForm > button {
+    width: 80%;
+    height: 35px;
+    margin: 0 0 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(100, 92, 255);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.todoList {
+    display: block;
+    margin: 30px auto 0;
+    width: 90%;
+    max-width: 600px;
+}
+
+.listItems {
+    font-size: 20px;
+    background-color: white;
+    width: 100%;
+    /* height: 55px; */
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.listItems:hover {
+    transform: scale(1.05);
+    transition: 0.3s all ease-in-out;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.parentSpan {
+    float: right;
+}
+
+/* .check {
+    display: block;
+    margin: 5px 0;
+} */
+
+.check {
+    float: left;
+    margin: 5px;
+}
+
+.reactIcon {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.edit {
+    color: green;
+}
+
+.delete {
+    color: red;
+}
